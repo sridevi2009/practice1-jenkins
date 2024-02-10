@@ -16,5 +16,16 @@ pipeline {
                 echo 'Hello Hyderabad, Good morning'
             }
         }
+         stage('Good evening') {
+            steps {
+                echo 'Hello banglore, Good eve'
+            }
+        }
+         stage('Good night') {
+            steps {
+                echo 'Hello Hyderabad, Good night'
+            }
+        }
+       
     }
 }
