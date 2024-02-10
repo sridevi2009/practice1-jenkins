@@ -1,10 +1,10 @@
 pipeline {
-    agent {
+    agent  {
         node {
-            Label 'Agent-1'
+            label 'Agent-1'
         }
     }
-   
+
     stages {
         stage('Hyderabad') {
             steps {
