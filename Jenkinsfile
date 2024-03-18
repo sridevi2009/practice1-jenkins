@@ -9,22 +9,22 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                echo 'Hello Hyderabad'
+                echo 'clone the code'
             }
         }
         stage('build') {
             steps {
-                echo 'Hello Hyderabad, Good morning'
+                echo 'install dependecies'
             }
         }
          stage('test') {
             steps {
-                echo 'Hello banglore, Good eve'
+                echo 'testing the code'
             }
         }
          stage('deploy') {
             steps {
-                echo 'Hello Hyderabad, Good night'
+                echo 'deploying the code'
             }
         }
         post { 
