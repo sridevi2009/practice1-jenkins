@@ -17,7 +17,7 @@ pipeline {
                 echo 'install dependecies'
             }
         }
-         stage('test') {
+         stage('testing') {
             steps {
                 echo 'testing the code'
             }
