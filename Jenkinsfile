@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh """
                     echo " I will run shell-script here "
-                    env   
+                    echo "$GREETING"   
                 """
             }
         }
