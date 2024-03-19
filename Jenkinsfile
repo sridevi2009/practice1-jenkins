@@ -45,7 +45,8 @@ pipeline {
                 sh """
                     echo " I will run shell-script here "
                     echo "$GREETING"
-                    sleep 10   
+                   
+                   # sleep 10   
                 """
             }
         }
