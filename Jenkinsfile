@@ -15,9 +15,9 @@ pipeline {
     parameters {
         string(name: 'SRIDEVI', defaultValue: 'HELLO-jenkins', description: 'Who should I say hello to?')
 
-        text(name: 'GOPI', defaultValue: 'one\ntwo\nthree\n', description: 'Enter some information about the person')
+        text(name: 'GOPI', defaultValue: 'hi\nim gopi\nworking in pharmacy in banglore\ndo u required some offers\n', description: 'Enter some information about the person')
 
-        booleanParam(name: 'Deploy-Dev', defaultValue: true, description: 'Toggle this value')
+        booleanParam(name: 'Deploy-Dev', defaultValue: true, description: 'Deploy-Dev this value')
 
         choice(name: 'ENV_DEV', choices: ['apply', 'destroy'], description: 'Pick something')
 
@@ -45,7 +45,7 @@ pipeline {
                 sh """
                     echo " I will run shell-script here "
                     echo "$GREETING"
-                    # sleep 10   
+                    sleep 10   
                 """
             }
         }
