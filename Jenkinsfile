@@ -12,6 +12,17 @@ pipeline {
         disableConcurrentBuilds()
         ansiColor ('xterm') 
     }
+    parameters {
+        string(name: 'SRIDEVI', defaultValue: 'HELLO-jenkins', description: 'Who should I say hello to?')
+
+        text(name: 'GOPI', defaultValue: 'one\ntwo\nthree\n', description: 'Enter some information about the person')
+
+        booleanParam(name: 'Deploy-Dev', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'ENV_DEV', choices: ['apply', 'destroy'], description: 'Pick something')
+
+        password(name: 'DEVOPS', defaultValue: 'DEVOPS321', description: 'Enter a password')
+    }
     
     stages {
         stage('clone') {
@@ -24,18 +35,31 @@ pipeline {
                 echo 'install dependecies'
             }
         }
-         stage('testing') {
+        stage('testing') {
             steps {
                 echo 'testing the code'
             }
         }
-         stage('deploy') {
+        stage('deploy') {
             steps {
                 sh """
                     echo " I will run shell-script here "
                     echo "$GREETING"
                     sleep 10   
                 """
+            }
+        }
+        stage('params') {
+            steps {
+                echo "SRIDEVI ${params.SRIDEVI}"
+
+                echo "GOPI: ${params.GOPI}"
+
+                echo "Deploy-Dev: ${params.Deploy-Dev}"
+
+                echo "ENV-DEV: ${params.ENV-DEV}"
+
+                echo "DEVOPS: ${params.DEVOPS}"
             }
         }
     } 
