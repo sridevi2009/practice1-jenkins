@@ -26,6 +26,8 @@ pipeline {
                 echo 'deploying the code'
             }
         }
+    } 
+
     post {
         always {
             echo ' I will always say Hello again '
@@ -39,9 +41,6 @@ pipeline {
         abort {
             echo 'I will run when the pipeline is ABORT'
         }
-
-    }
-        
 
     }
 }
