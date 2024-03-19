@@ -32,7 +32,8 @@ pipeline {
             steps {
                 sh """
                     echo " I will run shell-script here "
-                    echo "$GREETING"   
+                    echo "$GREETING"
+                    sleep 10   
                 """
             }
         }
