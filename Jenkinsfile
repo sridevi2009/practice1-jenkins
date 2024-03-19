@@ -8,7 +8,8 @@ pipeline {
         GREETING = 'Hello -JENKINS'
     }
     options {
-        timeout(time: 1, unit: 'SECONDS')
+        timeout(time: 1, unit: 'HOURS')
+        disableConcurrentBuilds()
         ansiColor ('xterm') 
     }
     
