@@ -32,7 +32,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                echo 'install dependecies'
+                echo ' install dependecies '
             }
         }
         stage('testing') {
@@ -46,7 +46,7 @@ pipeline {
                     echo " I will run shell-script here "
                     echo "$GREETING"
                    
-                   # sleep 10   
+                    sleep 10   
                 """
             }
         }
