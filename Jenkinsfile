@@ -4,6 +4,13 @@ pipeline {
             label 'agent'
         }
     }
+    environment { 
+        GREETINGS = 'Hello -JENKINS'
+    }
+    options {
+        timeout(time: 1, unit: 'HOURS')
+        ansiColor ('xterm') 
+    }
     
     stages {
         stage('clone') {
@@ -24,6 +31,7 @@ pipeline {
          stage('deploy') {
             steps {
                 echo 'deploying the code'
+                env
             }
         }
     } 
