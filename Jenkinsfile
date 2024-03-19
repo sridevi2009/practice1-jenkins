@@ -38,7 +38,7 @@ pipeline {
         success {
             echo ' I will run always when the above pipeline is SUCCESS '
         }
-        abort {
+        aborted {
             echo 'I will run when the pipeline is ABORT'
         }
 
