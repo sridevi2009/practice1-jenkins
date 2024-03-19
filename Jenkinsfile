@@ -30,8 +30,10 @@ pipeline {
         }
          stage('deploy') {
             steps {
-                echo 'deploying the code'
-                env
+                ssh """
+                    echo " I will run shell-script here "
+                    env   
+                """
             }
         }
     } 
