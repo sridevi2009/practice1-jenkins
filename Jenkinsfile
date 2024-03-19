@@ -5,7 +5,6 @@ pipeline {
         }
     }
     
-
     stages {
         stage('clone') {
             steps {
@@ -27,22 +26,7 @@ pipeline {
                 echo 'deploying the code'
             }
         }
-        post { 
-            always { 
-                echo 'I will always say Hello again!'
-            }
-            success {
-                echo 'I will run when pipeline is SUCCESS'
+        
 
-            }
-            failure {
-                echo ' I will run when above pipeline is FAILURE'
-            }
-            abort {
-                echo 'I will run when the above pipeline is ABORTED'
-            }
-        }    
-
-       
     }
 }
