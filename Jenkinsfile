@@ -52,15 +52,15 @@ pipeline {
         stage('params') {
             steps {
                 sh """
-                    echo "SRIDEVI ${params.SRIDEVI}"
+                    echo "Sridevi ${params.SRIDEVI}"
 
-                    echo "GOPI: ${params.GOPI}"
+                    echo "Gopi: ${params.GOPI}"
 
-                    echo "Deploy-Dev: ${params.Deploy-Dev}"
+                    echo "Deploy-dev: ${params.Deploy-Dev}"
 
-                    echo "ENV-DEV: ${params.ENV-DEV}"
+                    echo "Env-dev: ${params.ENV-DEV}"
 
-                    echo "DEVOPS: ${params.DEVOPS}"
+                    echo "Devops: ${params.DEVOPS}"
                 """    
             }
         }
